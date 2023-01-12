@@ -20,9 +20,8 @@ module.exports = {
     createImage: async (req, res) => {
         try {
             const { image } = req.body
-            const createImage = {
-                image
-            }
+            const createImage = image
+
             if (createImage) {
                 const newImage = await Image.create(createImage)
                 console.log("Post has been added!")
