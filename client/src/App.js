@@ -16,28 +16,10 @@ const App = () => {
 
 
 
-// export const postData = async ({
-//   setpostDataLoading,
-//   setPostDatas,
-//   title,
-//   image,
-// }) => {
-//   try {
-//     const datas = { title, image: image.filesUploaded[0].url };
-//     setpostDataLoading(true);
-//     let res = await axios.post(`${URL}/`, datas);
-//     if (res) {
-//       setpostDataLoading(false);
-//       setPostDatas(res.data);
-//     }
-//   } catch (error) {
-//     alert(error.response.data.msg);
-//     setpostDataLoading(false);
-//   }
-// };
 
  const submitHandler = (event) => {
     event.preventDefault()
+    !image ? alert("image require") :
     postData({image, setPostDatas, setpostDataLoading})
  }
 
@@ -54,22 +36,31 @@ const App = () => {
     <div className="App">
       <form
         onSubmit={submitHandler}>
-       <div>  
-       {/* filestack upload button*/}
+        {image ? (
+          <img
+            src={image && image.filesUploaded[0].url}
+            alt="imageUploded"
+            className="w-full h-56 object-cover"
+          />
+        ): (
+        
         <button 
           onClick={() =>
             isPickerOverlayVisible
               ? setIsPickerOverlayVisible(false)
               : setIsPickerOverlayVisible(true)
           }
+          type="button"
         >
           Upload
-        </button>     
+        </button> 
+        )}    
+
           {/* submit button  */}
           <button type='submit'>
             {postDataLoading ? "Loading..." : "SUBMIT"}
           </button>
-      </div>
+   
       <div>        
               {isPickerOverlayVisible && <PickerOverlay 
               apikey={process.env.REACT_APP_FILESTACK_API_KEY}
