@@ -5,7 +5,7 @@ import "yet-another-react-lightbox/styles.css";
 
 
 
-function PhotoGallery({result }) {
+function PhotoGallery({ result }) {
  const [open, setOpen] = useState(false)
 
   

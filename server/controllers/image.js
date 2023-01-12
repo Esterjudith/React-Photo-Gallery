@@ -19,10 +19,9 @@ module.exports = {
     },
     createImage: async (req, res) => {
         try {
-            const { image, title } = req.body
+            const { image } = req.body
             const createImage = {
-                image,
-                title,
+                image
             }
             if (createImage) {
                 const newImage = await Image.create(createImage)
