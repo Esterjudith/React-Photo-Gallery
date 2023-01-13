@@ -24,7 +24,7 @@ export const postData = async ({
     try {
         const datas = { title, image: image.filesUploaded[0].url };
         setpostDataLoading(true);
-        let res = await axios.post(`http://localhost:3001/`, datas);
+        let res = await axios.post(`${URL}/`, datas);
         if (res) {
             setpostDataLoading(false);
             setPostDatas(res.data);
