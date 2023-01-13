@@ -6,6 +6,6 @@ const { getIndex, getImage, createImage } = require('../controllers/image')
 
 router.get('/', getIndex)
 router.get('/images', getImage)
-router.post('/createImage', upload.single("file"), createImage)
+router.post('/createImage', upload.single("image"), createImage)
 
 module.exports = router

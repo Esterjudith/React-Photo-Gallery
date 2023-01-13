@@ -5,19 +5,19 @@ import "yet-another-react-lightbox/styles.css";
 
 
 
-function PhotoGallery({ result }) {
+function PhotoGallery({ imageUrl }) {
     const [open, setOpen] = useState(false)
 
 
-    const items = result.map(({ image }) => ({
-        src: image,
+    const items = imageUrl.map(({ url }) => ({
+        src: url,
         width: 320,
         height: 174
     }))
 
 
-    const slides = result.map(({ image }) => ({
-        src: image
+    const slides = imageUrl.map(({ url }) => ({
+        src: url
     }))
 
     //   const handleClick = (index, slides) => setIndex(index);
