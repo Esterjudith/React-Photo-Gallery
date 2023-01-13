@@ -5,13 +5,15 @@ import Loading from './components/Loading';
 import { PickerOverlay } from 'filestack-react';
 import { getData, postData } from './API/Api'
 
+
 const App = () => {
   
   const[image, setImage] = useState("")
   const[result, setResult] = useState([])
   const[getDataLoading, setGetDataLoading] = useState(true)  
-  const [postDataLoading, setpostDataLoading] = useState(false);
-  const [postDatas, setPostDatas] = useState();  
+  const[postDataLoading, setpostDataLoading] = useState(false);
+  const[postDatas, setPostDatas] = useState();  
+  const[title, setTitle] = useState("")
   const [isPickerOverlayVisible, setIsPickerOverlayVisible] = useState(false); 
 
 
@@ -19,14 +21,18 @@ const App = () => {
 
  const submitHandler = (event) => {
     event.preventDefault()
-    !image ? alert("image require") :
-    postData({image, setPostDatas, setpostDataLoading})
+    !image ? 
+    alert("image require") :
+    title.length < 3
+    ? alert("title is too short")
+    :postData({image, setPostDatas, setpostDataLoading})
  }
 
   useEffect(()=> {
     getData({setResult,setGetDataLoading})
     if(postDatas){
         setImage("")
+        setTitle("")
         getData({ setResult, setGetDataLoading })
     }
   }, [postDatas])
@@ -36,14 +42,7 @@ const App = () => {
     <div className="App">
       <form
         onSubmit={submitHandler}>
-        {image ? (
-          <img
-            src={image && image.filesUploaded[0].url}
-            alt="imageUploded"
-            className="w-full h-56 object-cover"
-          />
-        ): (
-        
+      
         <button 
           onClick={() =>
             isPickerOverlayVisible
@@ -52,26 +51,38 @@ const App = () => {
           }
           type="button"
         >
-          Upload
+          Pick Image
         </button> 
-        )}    
+       
+
+        <input 
+        type="text"        
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Image Title" />
 
           {/* submit button  */}
           <button type='submit'>
             {postDataLoading ? "Loading..." : "SUBMIT"}
           </button>
    
-      <div>        
-              {isPickerOverlayVisible && <PickerOverlay 
+        <div>        
+              {isPickerOverlayVisible && (
+              <PickerOverlay 
               apikey={process.env.REACT_APP_FILESTACK_API_KEY}
-              onSuccess={(res) => console.log(res)}       
-              onUploadDone={(res) => console.log(res)} 
-                       
-              />}
-            
-
+              onSuccess={(res) => {
+                setImage(res)
+                console.log(res)
+                setIsPickerOverlayVisible(false)}} 
+                onError={(res) => console.log(res)}
+               pickerOptions={{
+                maxFiles: 1,
+                accept: ["image/*"],
+                errorsTimeout: 2000,
+                maxSize: 1 * 900 * 900,
+              }}       
+         />)}        
       </div>
-
      </form>       
       {
         getDataLoading && <Loading/>

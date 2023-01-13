@@ -5,7 +5,7 @@ const URL = process.env.REACT_APP_SERVER_URL
 export const getData = async ({ setGetDataLoading, setResult }) => {
     try {
 
-        let res = await axios.get(URL)
+        let res = await axios.get(`${URL}/images`)
         setGetDataLoading(false)
         setResult(res.data)
 
@@ -18,12 +18,13 @@ export const getData = async ({ setGetDataLoading, setResult }) => {
 export const postData = async ({
     setpostDataLoading,
     setPostDatas,
+    title,
     image,
 }) => {
     try {
-        const datas = { image: image.filesUploaded[0].url };
+        const datas = { title, image: image.filesUploaded[0].url };
         setpostDataLoading(true);
-        let res = await axios.post(`${URL}/createImages`, datas);
+        let res = await axios.post(`http://localhost:3001/`, datas);
         if (res) {
             setpostDataLoading(false);
             setPostDatas(res.data);

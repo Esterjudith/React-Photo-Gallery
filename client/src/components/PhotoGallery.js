@@ -12,7 +12,7 @@ function PhotoGallery({ result }) {
     const items = result.map(({ image }) => ({
         src: image,
         width: 320,
-        height: 174
+        height: 250
     }))
 
 
