@@ -50,6 +50,7 @@ const App = () => {
               : setIsPickerOverlayVisible(true)
           }
           type="button"
+          className='btn'
         >
           Pick Image
         </button> 
@@ -59,10 +60,11 @@ const App = () => {
         type="text"        
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Image Title" />
+        placeholder="Image Title"           
+        />
 
           {/* submit button  */}
-          <button type='submit'>
+          <button type='submit' className='btn'>
             {postDataLoading ? "Loading..." : "SUBMIT"}
           </button>
    
