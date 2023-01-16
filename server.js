@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const logger = require('morgan');
-const connectDB = require('../server/config/database');
+const connectDB = require('./config/database');
 const cors = require('cors')
 // const upload = require("./middleware/multer")
 const path = require('path')
@@ -17,7 +17,7 @@ require("dotenv").config({ path: "./config/.env" });
 connectDB();
 
 //serving the frontend
-app.use(express.static(path.join(__dirname, "../client/build")))
+app.use(express.static(path.join(__dirname, "./client/build")))
 
 app.get("/", (req, res) => {
     console.log("Sending file:", path.join(__dirname, "./client/build/index.html"))
