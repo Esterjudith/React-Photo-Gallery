@@ -17,12 +17,12 @@ require("dotenv").config({ path: "./config/.env" });
 connectDB();
 
 //serving the frontend
-app.use(express.static(path.join(__dirname, "./client/build")))
+app.use(express.static(path.join(__dirname, "../client/build")))
 
 app.get("*", (req, res) => {
-    console.log("Sending file:", path.join(__dirname, "./client/build/index.html"))
+    console.log("Sending file:", path.join(__dirname, "../client/build/index.html"))
     res.sendFile(
-        path.join(__dirname, "./client/build/index.html"),
+        path.join(__dirname, "../client/build/index.html"),
         function (err) {
             res.status(500).send(err)
         }
@@ -30,9 +30,7 @@ app.get("*", (req, res) => {
 
 })
 
-app.use(cors({
-    origin: `${process.env.CLIENT_URL}`
-}))
+app.use(cors())
 
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
@@ -48,5 +46,5 @@ app.use('/', imageRoutes)
 
 //Server Running
 app.listen(process.env.PORT || 3001, () => {
-    console.log("Server is running, you better catch it!");
+    console.log(`Server is running on port ${process.env.PORT}, you better catch it!`);
 })

@@ -11,7 +11,9 @@ module.exports = {
     // },
     getImage: async (req, res) => {
         try {
+            console.log("getting image")
             const image = await Image.find({}).sort({ _id: -1 })
+            console.log(image)
             res.status(200).json(image)
         } catch (error) {
             console.log(err)
