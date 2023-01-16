@@ -29,6 +29,7 @@ const App = () => {
     }
 
     useEffect(() => {
+        console.log("Does useEffect work?")
         getData({ setResult, setGetDataLoading })
         if (postDatas) {
             setImage("")

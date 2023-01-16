@@ -8,6 +8,10 @@ import "yet-another-react-lightbox/styles.css";
 function PhotoGallery({ result }) {
     const [open, setOpen] = useState(false)
 
+    if (!Array.isArray(result)) {
+        console.log("Result is not an array");
+        return null;
+    }
 
     const items = result.map(({ image }) => ({
         src: image,

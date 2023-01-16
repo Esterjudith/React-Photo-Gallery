@@ -3,10 +3,12 @@ import axios from "axios";
 const URL = process.env.REACT_APP_SERVER_URL
 
 export const getData = async ({ setGetDataLoading, setResult }) => {
+    console.log("getData")
     try {
-
+        console.log("checking")
         let res = await axios.get(`${URL}/images`)
         setGetDataLoading(false)
+        console.log(res.data)
         setResult(res.data)
 
     } catch (error) {

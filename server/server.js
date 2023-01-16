@@ -16,7 +16,19 @@ require("dotenv").config({ path: "./config/.env" });
 //Connect to Database
 connectDB();
 
-app.use(express.static(__dirname + '../..'))
+//serving the frontend
+app.use(express.static(path.join(__dirname, "./client/build")))
+
+app.get("*", (req, res) => {
+    console.log("Sending file:", path.join(__dirname, "./client/build/index.html"))
+    res.sendFile(
+        path.join(__dirname, "./client/build/index.html"),
+        function (err) {
+            res.status(500).send(err)
+        }
+    )
+
+})
 
 app.use(cors({
     origin: `${process.env.CLIENT_URL}`
@@ -35,6 +47,6 @@ app.use('/', imageRoutes)
 
 
 //Server Running
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log("Server is running, you better catch it!");
 })
