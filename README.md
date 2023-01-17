@@ -7,7 +7,6 @@ Live link: https://react-photo-gallery.cyclic.app/
 
 ## How it's made
 This is a full-stack application built with MVC architecture and authentication.
-* [![React][React.js]][React-url]
 * [![MongoDB][MongoDB]][MongoDB-url]
 * [![Express][Express.js]][Express-url]
 * [![Node][Node.js]][Node-url]
