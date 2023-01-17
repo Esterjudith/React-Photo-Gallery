@@ -26,3 +26,4 @@ This is a full-stack application using the following:
 [EJS-url]: https://ejs.co
 [React.js]: https://img.shields.io/badge/-React.js-61DAFB?style=flat&logo=reactdotjs&logoColor=61DBFB
 [React-url]: https://reactjs.org
+
