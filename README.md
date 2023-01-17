@@ -8,7 +8,7 @@ Live link: https://react-photo-gallery.cyclic.app/
 
 ## How it's made
 This is a full-stack application using the following:
-
+* [![React][React.js]][React-url]
 * [![MongoDB][MongoDB]][MongoDB-url]
 * [![Express][Express.js]][Express-url]
 * [![Node][Node.js]][Node-url]
@@ -24,5 +24,5 @@ This is a full-stack application using the following:
 [MongoDB-url]: https://www.mongodb.com
 [EJS]: https://img.shields.io/badge/-EJS-%238f3d3d?style=flat&logo=javascript&logoColor=ffffff
 [EJS-url]: https://ejs.co
-[React.js]: https://img.shields.io/badge/-React.js-#61DAFB?style=flat&logo=reactdotjs&logoColor=#61DBFB
+[React.js]: https://img.shields.io/badge/-React.js-61DAFB?style=flat&logo=reactdotjs&logoColor=61DBFB
 [React-url]: https://reactjs.org
