@@ -15,7 +15,8 @@ This is a full-stack application using the following:
 
 ## Features
 
-* Users can upload the image from their device choose from the following :
+* Users can upload an image from their device or choose from the following :
+
   *Link url
   *Web search
   *Facebook
