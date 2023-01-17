@@ -22,6 +22,8 @@ This is a full-stack application using the following:
   *Instagram
   *Google drive
 
+* Once the user selects the image and inputs a title they can submit it to the gallery and it is instantly added to the gallery.  
+* The user can click on the any image in the gallery and it will enlarge into a slide with a larger view of the image and with a click see the next or previous image on the slide. 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
