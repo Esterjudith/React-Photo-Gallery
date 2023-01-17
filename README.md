@@ -24,6 +24,6 @@ This is a full-stack application using the following:
 [MongoDB-url]: https://www.mongodb.com
 [EJS]: https://img.shields.io/badge/-EJS-%238f3d3d?style=flat&logo=javascript&logoColor=ffffff
 [EJS-url]: https://ejs.co
-[React.js]: https://img.shields.io/badge/-React.js-61DAFB?style=flat&logo=reactdotjs&logoColor=61DBFB
+[React.js]: https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white
 [React-url]: https://reactjs.org
 
