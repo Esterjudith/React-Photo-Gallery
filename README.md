@@ -13,6 +13,15 @@ This is a full-stack application using the following:
 * [![Express][Express.js]][Express-url]
 * [![Node][Node.js]][Node-url]
 
+## Features
+
+* Users can upload the image from their device choose from the following :
+  *Link url
+  *Web search
+  *Facebook
+  *Instagram
+  *Google drive
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
