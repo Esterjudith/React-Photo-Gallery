@@ -1,4 +1,4 @@
-pp# About the project
+# About the project
 
 Art is form of expression and what better way to express it than with photography. This app showcase ready available photography in a gallery. 
 
