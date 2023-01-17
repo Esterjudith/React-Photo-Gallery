@@ -17,10 +17,14 @@ This is a full-stack application using the following:
 
 * Users can upload an image from their device or choose from the following :
 
-  *Link url
+  *Link url 
+  
   *Web search
+  
   *Facebook
+  
   *Instagram
+  
   *Google drive
 
 * Once the user selects the image and inputs a title they can submit it to the gallery and it is instantly added to the gallery.  
