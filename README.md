@@ -28,7 +28,7 @@ This is a full-stack application using the following:
   *Google drive
 
 * Once the user selects the image and inputs a title they can submit it to the gallery and it is instantly added to the gallery.  
-* The user can click on any image in the gallery and it will enlarge into a slide with a larger view of the image and with a click the user may see the next or previous image on the slide. 
+* The user can click on any image in the gallery and it will enlarge into a slide with a larger view of the image and with a click the user may see the next or previous image in the slide. 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
