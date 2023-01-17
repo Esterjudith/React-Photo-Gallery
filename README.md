@@ -13,3 +13,13 @@ This is a full-stack application built with MVC architecture and authentication.
 * [![Node][Node.js]][Node-url]
 
 
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[Node.js]: https://img.shields.io/badge/Node.js-233056?style=flat&logo=nodedotjs&logoColor=339933
+[Node-url]: https://nodejs.org/en/
+[Express.js]: https://img.shields.io/badge/Express-eeeeee?style=flat&logo=express&logoColor=000000
+[Express-url]: https://expressjs.com
+[MongoDB]: https://img.shields.io/badge/MongoDB-023430?style=flat&logo=mongodb&logoColor=00ed64
+[MongoDB-url]: https://www.mongodb.com
+[EJS]: https://img.shields.io/badge/-EJS-%238f3d3d?style=flat&logo=javascript&logoColor=ffffff
+[EJS-url]: https://ejs.co
