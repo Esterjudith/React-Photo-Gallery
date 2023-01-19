@@ -1,6 +1,6 @@
 # About the project
 
-Art is a form of expression and what better way to express it than with photography. This app showcase ready available photography in a gallery. 
+Art is a form of expression and what better way to express it than with photography. This app showcase readily available photography in a gallery. 
 
 Live link: https://react-photo-gallery.cyclic.app/
 
