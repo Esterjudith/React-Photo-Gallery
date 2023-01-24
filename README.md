@@ -15,7 +15,7 @@ This is a full-stack application using the following:
 
 ## Features
 
-* Users can upload an image from their device or choose from the following :
+* With FileStack integration users can upload an image from their device or choose from the following :
 
   *Link url 
   
