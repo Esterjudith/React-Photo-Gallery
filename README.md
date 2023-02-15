@@ -5,6 +5,8 @@ Art is a form of expression and what better way to express it than with photogra
 Live link: https://react-photo-gallery.cyclic.app/
 
 ![image](https://user-images.githubusercontent.com/106325339/212783250-921777ae-2960-48a1-9a50-e717bd7881c8.png)
+![image](https://user-images.githubusercontent.com/106325339/219114941-fb1b6fca-3c23-4d73-b2eb-d8b6d09c7aaf.png)
+
 
 ## How it's made
 This is a full-stack application using the following:
